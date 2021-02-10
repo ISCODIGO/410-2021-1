@@ -219,8 +219,23 @@ public class Square
         }
     }
     
+    public void ascender(int altura)
+    {
+        Canvas canvas = Canvas.getCanvas();
+        Dimension dimension = canvas.getDimension();
+        
+        for (int y = yPosition + size; y <= dimension.getHeight(); y++) {
+            yPosition += 1;
+            draw();
+        }
+    }
+    
     public  int getSize()
     {        
         return this.size;
     }
+    
+    public void rebotar() 
+    {
+    }   
 }
